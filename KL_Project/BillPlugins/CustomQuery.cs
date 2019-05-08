@@ -35,8 +35,6 @@ namespace KL_Project.BillPlugins
                 var a = this.View.GetFieldEditor("FMATERIALID", e.Row);
                 var DataSource = this.Model.DataObject;
                 //采用SQL注入来实现自定义
-                e.ListFilterParameter.SelectEntitys.Add("t0_L.FSPECIFICATION");
-                e.ListFilterParameter.SelectFields.Add("t0_L.FSPECIFICATION");
                 e.ListFilterParameter.Filter = "FMODIFIERID = 100007 AND t0.FMATERIALID IN (100612,100614,100589))))))--";
             } 
         }
